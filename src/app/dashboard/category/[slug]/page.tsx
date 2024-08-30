@@ -7,11 +7,5 @@ export default function page({
     slug: string;
   };
 }) {
-  return (
-    <div className="bg-blue-500 h-screen grid place-items-center">
-        in {params.slug} page
-      <Link href="/dashboard" className="block font-black">Back to dashboard</Link>
-      
-    </div>
-  );
+  return <div className="grid place-content-center">in {params.slug} page</div>;
 }

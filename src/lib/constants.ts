@@ -21,3 +21,8 @@ export const marketplaceCategories = [
   { name: "Free Stuff", href: "/dashboard/category", icon: DollarSignIcon },
   { name: "Everything Else" , href: "/dashboard/category", icon: UsersIcon},
 ];
+
+export const userNavigation = [
+  { name: "Your profile", href: "#" },
+  { name: "Sign out", href: "#" },
+];
