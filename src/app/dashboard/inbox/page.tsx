@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import React from "react";
 const filters = [
   "All",
@@ -15,22 +16,31 @@ export default function DashboardInbox() {
   const [inbox, setInbox] = React.useState<"selling" | "buying">("selling");
   return (
     <main className="pt-10 bg-neutral-100">
-      <div className="flex flex-col gap-y-4 max-w-5xl lg:h-[700px] mx-auto">
+      <div className="flex flex-col gap-y-4 max-w-5xl lg:h-[80%] mx-auto">
         <section className="bg-white border rounded-lg shadow-md">
-          <div className="border-b  p-2 pb-1">
+          <div className="border-b  p-2 pb-0">
             <Button
               variant={"ghost"}
-              className={
-                inbox === "selling"
-                  ? "border-b-2 border-indigo-500 rounded-none"
-                  : ""
-              }
+              onClick={() => setInbox("selling")}
+              className={cn(
+                inbox === "selling" && "border-b-4 border-indigo-500",
+                "rounded-none"
+              )}
             >
               Selling
             </Button>
-            <Button variant={"ghost"}>Buying</Button>
+            <Button
+              variant={"ghost"}
+              onClick={() => setInbox("buying")}
+              className={cn(
+                inbox === "buying" && "border-b-4 border-indigo-500",
+                "rounded-none"
+              )}
+            >
+              Buying
+            </Button>
           </div>
-          <div className="p-2 pb-4 space-x-4 space-y-2">
+          <div className="p-2 pb-4 space-x-2 space-y-2">
             <span className="block pl-4 text-black/70 font-medium text-sm">
               Filter by label
             </span>
@@ -42,26 +52,30 @@ export default function DashboardInbox() {
           </div>
         </section>
         <section className="grow bg-white border rounded-lg shadow-md overflow-hidden">
-          <ul className="h-full px-4 overflow-y-scroll">
-            {Array.from({ length: 10 }, (_, idx) => (
-              <li key={idx} className="flex justify-between gap-x-6 py-5 border-b">
-                <div className="flex min-w-0 gap-x-4">
-                  <div className="size-10 rounded-full bg-neutral-200"/>
-                  <div className="min-w-0 flex-auto">
-                    <p className="text-sm font-semibold leading-6 text-gray-900">
-                      Leslie Alexander
+          <ul className="h-full overflow-y-scroll">
+            {Array.from({ length: 5 }, (_, idx) => (
+              <li
+                key={idx}
+                className="flex gap-x-4 py-5 px-4 border-b hover:bg-neutral-100 cursor-pointer"
+              >
+                <div className="h-12 w-12 flex-none rounded-full bg-neutral-200" />
+                <div className="flex-auto">
+                  <div className="flex items-baseline justify-between gap-x-4">
+                    <p className="text-sm  leading-6">
+                      <span className="uppercase font-semibold">
+                        Headphones
+                      </span>{" "}
+                      - Joel Embid
                     </p>
-                    <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                      leslie.alexander@example.com
-                    </p>
+                    <p className="flex-none text-xs text-gray-600">2D</p>
                   </div>
-                </div>
-                <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p className="text-sm leading-6 text-gray-900">
-                    Co-Founder / CEO
-                  </p>
-                  <p className="mt-1 text-xs leading-5 text-gray-500">
-                    Last seen <time dateTime="2023-01-23T13:23Z">3h ago</time>
+                  <p className="mt-1 line-clamp-2 text-sm leading-6 text-gray-600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Deserunt, necessitatibus placeat aliquid reprehenderit error
+                    ducimus accusantium eos non fugit officia dignissimos nisi
+                    vitae quas ipsam. Consequatur, blanditiis beatae eveniet
+                    ducimus soluta in quam at architecto necessitatibus alias
+                    ipsum temporibus id.
                   </p>
                 </div>
               </li>
