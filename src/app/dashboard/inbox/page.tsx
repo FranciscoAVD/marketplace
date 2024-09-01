@@ -15,7 +15,7 @@ const filters = [
 export default function DashboardInbox() {
   const [inbox, setInbox] = React.useState<"selling" | "buying">("selling");
   return (
-    <main className="pt-10 bg-neutral-100">
+    <main className="pt-10 bg-neutral-100 overflow-hidden">
       <div className="flex flex-col gap-y-4 max-w-5xl lg:h-[80%] mx-auto">
         <section className="bg-white border rounded-lg shadow-md">
           <div className="border-b  p-2 pb-0">
@@ -53,7 +53,7 @@ export default function DashboardInbox() {
         </section>
         <section className="grow bg-white border rounded-lg shadow-md overflow-hidden">
           <ul className="h-full overflow-y-scroll">
-            {Array.from({ length: 5 }, (_, idx) => (
+            {Array.from({ length: 8 }, (_, idx) => (
               <li
                 key={idx}
                 className="flex gap-x-4 py-5 px-4 border-b hover:bg-neutral-100 cursor-pointer"
