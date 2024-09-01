@@ -7,5 +7,17 @@ export default function page({
     slug: string;
   };
 }) {
-  return <div className="grid place-content-center">in {params.slug} page</div>;
+  return (
+    <main className="bg-neutral-100 p-4 overflow-y-scroll">
+      <ul className="flex justify-center flex-wrap gap-4">
+        {Array.from({ length: 50 }, (_, idx) => (
+          <li key={idx}>
+            <Link href="/dashboard">
+              <div className="w-[200px] h-[250px] bg-neutral-200 rounded-lg"></div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
 }
