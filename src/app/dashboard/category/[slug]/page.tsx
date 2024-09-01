@@ -8,7 +8,8 @@ export default function page({
   };
 }) {
   return (
-    <main className="bg-neutral-100 p-4 overflow-y-scroll">
+    <main className="bg-neutral-100 p-4 space-y-8 overflow-y-scroll">
+      <h1 className="text-xl font-bold">{params.slug} <span className="font-light">{"(50)"}</span></h1>
       <ul className="flex justify-center flex-wrap gap-4">
         {Array.from({ length: 50 }, (_, idx) => (
           <li key={idx}>
