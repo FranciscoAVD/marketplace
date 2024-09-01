@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import React from "react";
 const filters = [
   "All",
@@ -23,7 +24,7 @@ export default function DashboardInbox() {
               variant={"ghost"}
               onClick={() => setInbox("selling")}
               className={cn(
-                inbox === "selling" && "border-b-4 border-indigo-500",
+                inbox === "selling" && "border-b-4 border-neutral-900",
                 "rounded-none"
               )}
             >
@@ -33,7 +34,7 @@ export default function DashboardInbox() {
               variant={"ghost"}
               onClick={() => setInbox("buying")}
               className={cn(
-                inbox === "buying" && "border-b-4 border-indigo-500",
+                inbox === "buying" && "border-b-4 border-neutral-900",
                 "rounded-none"
               )}
             >
@@ -52,32 +53,34 @@ export default function DashboardInbox() {
           </div>
         </section>
         <section className="grow bg-white border rounded-lg shadow-md overflow-hidden">
-          <ul className="h-full overflow-y-scroll">
+          <ul className="h-full p-1 overflow-y-scroll">
             {Array.from({ length: 8 }, (_, idx) => (
-              <li
-                key={idx}
-                className="flex gap-x-4 py-5 px-4 border-b hover:bg-neutral-100 cursor-pointer"
-              >
-                <div className="h-12 w-12 flex-none rounded-full bg-neutral-200" />
-                <div className="flex-auto">
-                  <div className="flex items-baseline justify-between gap-x-4">
-                    <p className="text-sm  leading-6">
-                      <span className="uppercase font-semibold">
-                        Headphones
-                      </span>{" "}
-                      - Joel Embid
+              <li key={idx}>
+                <Link
+                  href="/dashboard"
+                  className="flex gap-x-4 py-5 px-4 border-b hover:bg-neutral-100 cursor-pointer"
+                >
+                  <div className="h-12 w-12 flex-none rounded-full bg-neutral-200" />
+                  <div className="flex-auto">
+                    <div className="flex items-baseline justify-between gap-x-4">
+                      <p className="text-sm  leading-6">
+                        <span className="uppercase font-semibold">
+                          Headphones
+                        </span>{" "}
+                        - Joel Embid
+                      </p>
+                      <p className="flex-none text-xs text-gray-600">2D</p>
+                    </div>
+                    <p className="mt-1 line-clamp-2 text-sm leading-6 text-gray-600">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt, necessitatibus placeat aliquid reprehenderit
+                      error ducimus accusantium eos non fugit officia
+                      dignissimos nisi vitae quas ipsam. Consequatur, blanditiis
+                      beatae eveniet ducimus soluta in quam at architecto
+                      necessitatibus alias ipsum temporibus id.
                     </p>
-                    <p className="flex-none text-xs text-gray-600">2D</p>
                   </div>
-                  <p className="mt-1 line-clamp-2 text-sm leading-6 text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Deserunt, necessitatibus placeat aliquid reprehenderit error
-                    ducimus accusantium eos non fugit officia dignissimos nisi
-                    vitae quas ipsam. Consequatur, blanditiis beatae eveniet
-                    ducimus soluta in quam at architecto necessitatibus alias
-                    ipsum temporibus id.
-                  </p>
-                </div>
+                </Link>
               </li>
             ))}
           </ul>
