@@ -22,6 +22,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
+import NewItemSidebar from "../../new-item/_components/new-item-details";
 const navigation = [
   { name: "Browse All", href: "/dashboard", icon: StoreIcon },
   {
@@ -44,9 +45,16 @@ const navigation = [
 
 export function SidebarDesktop({ className }: { className?: string }) {
   const path = usePathname();
+  console.log(path);
   return (
     <aside className={className}>
-      <nav className="p-4">
+      {path === "/dashboard/new-item" ? <NewItemSidebar /> : <DashboardSidebar path={path}/>}
+    </aside>
+  );
+}
+function DashboardSidebar({path}:{path: string}){
+  return (
+    <nav className="p-4">
         <ul role="list" className="flex flex-1 flex-col gap-y-7">
           <li>
             <NavigationItems activePath={path} />
@@ -71,9 +79,11 @@ export function SidebarDesktop({ className }: { className?: string }) {
           </li>
         </ul>
       </nav>
-    </aside>
-  );
+  )
 }
+
+
+//Mobile
 export function SidebarMobile({
   isOpen,
   set,
@@ -142,6 +152,10 @@ export function SidebarMobile({
     </Dialog>
   );
 }
+
+//COMPONENTS
+
+//Dashboard
 function NavigationItems({ activePath }: { activePath: string }) {
   return (
     <ul role="list" className="-mx-2 space-y-1">
@@ -218,3 +232,4 @@ function MarketplaceCategoryItems({ activePath }: { activePath: string }) {
     </ul>
   );
 }
+
