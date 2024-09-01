@@ -23,13 +23,9 @@ import { usePathname } from "next/navigation";
 import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import NewItemSidebar from "../../new-item/_components/new-item-details";
+
 const navigation = [
   { name: "Browse All", href: "/dashboard", icon: StoreIcon },
-  {
-    name: "Notifications",
-    href: "/dashboard/notifications",
-    icon: BellRingIcon,
-  },
   { name: "Inbox", href: "/dashboard/inbox", icon: InboxIcon },
   {
     name: "Buying",
