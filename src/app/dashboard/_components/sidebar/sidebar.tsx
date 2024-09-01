@@ -9,6 +9,7 @@ import {
 import {
   BellRingIcon,
   InboxIcon,
+  PlusIcon,
   SettingsIcon,
   ShoppingBasketIcon,
   StoreIcon,
@@ -20,6 +21,7 @@ import { marketplaceCategories } from "@/lib/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/logo";
+import { Button } from "@/components/ui/button";
 const navigation = [
   { name: "Browse All", href: "/dashboard", icon: StoreIcon },
   {
@@ -50,7 +52,7 @@ export function SidebarDesktop({ className }: { className?: string }) {
             <NavigationItems activePath={path} />
           </li>
           <li>
-            <div className="text-xs font-semibold leading-6 text-gray-400">
+            <div className="text-xs font-semibold leading-6 text-neutral-400">
               Categories
             </div>
             <MarketplaceCategoryItems activePath={path} />
@@ -58,11 +60,11 @@ export function SidebarDesktop({ className }: { className?: string }) {
           <li className="mt-auto">
             <Link
               href="/dashboard/settings"
-              className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
+              className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-neutral-700 hover:bg-neutral-50 hover:text-neutral-600"
             >
               <SettingsIcon
                 aria-hidden="true"
-                className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
+                className="h-6 w-6 shrink-0 text-neutral-400 group-hover:text-neutral-600"
               />
               Settings
             </Link>
@@ -85,7 +87,7 @@ export function SidebarMobile({
     <Dialog open={isOpen} onClose={set} className="relative z-50 lg:hidden">
       <DialogBackdrop
         transition
-        className="fixed inset-0 bg-gray-900/80 transition-opacity duration-300 ease-linear data-[closed]:opacity-0"
+        className="fixed inset-0 bg-neutral-900/80 transition-opacity duration-300 ease-linear data-[closed]:opacity-0"
       />
 
       <div className="fixed inset-0 flex">
@@ -114,7 +116,7 @@ export function SidebarMobile({
                   <NavigationItems activePath={path} />
                 </li>
                 <li>
-                  <div className="text-xs font-semibold leading-6 text-gray-400">
+                  <div className="text-xs font-semibold leading-6 text-neutral-400">
                     Categories
                   </div>
 
@@ -123,11 +125,11 @@ export function SidebarMobile({
                 <li className="mt-auto">
                   <a
                     href="#"
-                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
+                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-neutral-700 hover:bg-neutral-50 hover:text-neutral-600"
                   >
                     <SettingsIcon
                       aria-hidden="true"
-                      className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
+                      className="h-6 w-6 shrink-0 text-neutral-400 group-hover:text-neutral-600"
                     />
                     Settings
                   </a>
@@ -150,8 +152,8 @@ function NavigationItems({ activePath }: { activePath: string }) {
             className={cn(
               "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
               {
-                "bg-gray-50 text-indigo-600": activePath === item.href,
-                "text-gray-700 hover:bg-gray-50 hover:text-indigo-600":
+                "bg-neutral-50 text-neutral-600": activePath === item.href,
+                "text-neutral-700 hover:bg-neutral-50 hover:text-neutral-600":
                   activePath !== item.href,
               }
             )}
@@ -159,8 +161,8 @@ function NavigationItems({ activePath }: { activePath: string }) {
             <item.icon
               aria-hidden="true"
               className={cn("h-6 w-6 shrink-0", {
-                "text-indigo-600": activePath === item.href,
-                "text-gray-400 group-hover:text-indigo-600":
+                "text-neutral-600": activePath === item.href,
+                "text-neutral-400 group-hover:text-neutral-600":
                   activePath !== item.href,
               })}
             />
@@ -168,6 +170,14 @@ function NavigationItems({ activePath }: { activePath: string }) {
           </Link>
         </li>
       ))}
+      <li>
+        <Button className="w-full justify-center gap-x-2" asChild>
+          <Link href="/dashboard/new-item">
+            <PlusIcon className="size-6" />
+            Create new item
+          </Link>
+        </Button>
+      </li>
     </ul>
   );
 }
@@ -181,9 +191,9 @@ function MarketplaceCategoryItems({ activePath }: { activePath: string }) {
             className={cn(
               "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
               {
-                "bg-gray-50 text-indigo-600":
+                "bg-neutral-50 text-neutral-600":
                   activePath === cat.href + `/${stringToSlug(cat.name)}`,
-                "text-gray-700 hover:bg-gray-50 hover:text-indigo-600":
+                "text-neutral-700 hover:bg-neutral-50 hover:text-neutral-600":
                   activePath !== cat.href + `/${stringToSlug(cat.name)}`,
               }
             )}
@@ -192,9 +202,9 @@ function MarketplaceCategoryItems({ activePath }: { activePath: string }) {
               className={cn(
                 "flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-white text-[0.625rem] font-medium",
                 {
-                  " text-indigo-600":
+                  " text-neutral-600":
                     activePath === cat.href + `/${stringToSlug(cat.name)}`,
-                  "text-gray-400 group-hover:text-indigo-600":
+                  "text-neutral-400 group-hover:text-neutral-600":
                     activePath !== cat.href + `/${stringToSlug(cat.name)}`,
                 }
               )}
