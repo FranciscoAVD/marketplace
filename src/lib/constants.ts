@@ -7,7 +7,6 @@ export const marketplaceCategories = [
   { name: "Electronics" , href: "/dashboard/category", icon: SmartphoneIcon},
   { name: "Home Goods" , href: "/dashboard/category", icon: HouseIcon},
   { name: "Garden & Outdoor" , href: "/dashboard/category", icon: ShovelIcon},
-  { name: "Hobbies" , href: "/dashboard/category", icon: BrushIcon},
   {name: "Family" , href: "/dashboard/category", icon: HeartIcon},
   { name: "Sporting Goods" , href: "/dashboard/category", icon: BikeIcon},
   { name: "Toys & Games" , href: "/dashboard/category", icon: Gamepad2Icon},
