@@ -78,7 +78,6 @@ function DashboardSidebar({path}:{path: string}){
   )
 }
 
-
 //Mobile
 export function SidebarMobile({
   isOpen,
