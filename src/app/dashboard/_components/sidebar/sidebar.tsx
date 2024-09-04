@@ -41,41 +41,44 @@ const navigation = [
 
 export function SidebarDesktop({ className }: { className?: string }) {
   const path = usePathname();
-  console.log(path);
   return (
     <aside className={className}>
-      {path === "/dashboard/new-item" ? <NewItemSidebar /> : <DashboardSidebar path={path}/>}
+      {path === "/dashboard/new-item" ? (
+        <NewItemSidebar />
+      ) : (
+        <DashboardSidebar path={path} />
+      )}
     </aside>
   );
 }
-function DashboardSidebar({path}:{path: string}){
+function DashboardSidebar({ path }: { path: string }) {
   return (
     <nav className="p-4">
-        <ul role="list" className="flex flex-1 flex-col gap-y-7">
-          <li>
-            <NavigationItems activePath={path} />
-          </li>
-          <li>
-            <div className="text-xs font-semibold leading-6 text-neutral-400">
-              Categories
-            </div>
-            <MarketplaceCategoryItems activePath={path} />
-          </li>
-          <li className="mt-auto">
-            <Link
-              href="/dashboard/settings"
-              className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-neutral-700 hover:bg-neutral-50 hover:text-neutral-600"
-            >
-              <SettingsIcon
-                aria-hidden="true"
-                className="h-6 w-6 shrink-0 text-neutral-400 group-hover:text-neutral-600"
-              />
-              Settings
-            </Link>
-          </li>
-        </ul>
-      </nav>
-  )
+      <ul role="list" className="flex flex-1 flex-col gap-y-7">
+        <li>
+          <NavigationItems activePath={path} />
+        </li>
+        <li>
+          <div className="text-xs font-semibold leading-6 text-neutral-400">
+            Categories
+          </div>
+          <MarketplaceCategoryItems activePath={path} />
+        </li>
+        <li className="mt-auto">
+          <Link
+            href="/dashboard/settings"
+            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-neutral-700 hover:bg-neutral-50 hover:text-neutral-600"
+          >
+            <SettingsIcon
+              aria-hidden="true"
+              className="h-6 w-6 shrink-0 text-neutral-400 group-hover:text-neutral-600"
+            />
+            Settings
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
 //Mobile
@@ -180,7 +183,12 @@ function NavigationItems({ activePath }: { activePath: string }) {
         </li>
       ))}
       <li>
-        <Button className="w-full justify-center gap-x-2" asChild>
+        <Button
+          className={`w-full justify-center gap-x-2 ${
+            activePath === "/dashboard/new-item" && "hidden"
+          }`}
+          asChild
+        >
           <Link href="/dashboard/new-item">
             <PlusIcon className="size-6" />
             Create new item
@@ -227,4 +235,3 @@ function MarketplaceCategoryItems({ activePath }: { activePath: string }) {
     </ul>
   );
 }
-
