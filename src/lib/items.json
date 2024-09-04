@@ -1,0 +1,324 @@
+[
+  {
+    "itemName": "Honda Civic",
+    "category": "Vehicles",
+    "price": 12000,
+    "description": "Well-maintained, low mileage sedan.",
+    "seller": "John's Auto"
+  },
+  {
+    "itemName": "Downtown Loft",
+    "category": "Property Rentals",
+    "price": 2500,
+    "description": "Luxury loft in the heart of downtown.",
+    "seller": "City Realtors"
+  },
+  {
+    "itemName": "Leather Jacket",
+    "category": "Apparel",
+    "price": 150,
+    "description": "Genuine leather, stylish and durable.",
+    "seller": "Fashion Outlet"
+  },
+  {
+    "itemName": "MacBook Pro",
+    "category": "Electronics",
+    "price": 2000,
+    "description": "2023 model, 16GB RAM, 512GB SSD.",
+    "seller": "Tech World"
+  },
+  {
+    "itemName": "Sofa Set",
+    "category": "Home Goods",
+    "price": 800,
+    "description": "Comfortable 3-piece sofa set.",
+    "seller": "Furniture Depot"
+  },
+  {
+    "itemName": "Lawn Mower",
+    "category": "Garden & Outdoor",
+    "price": 300,
+    "description": "Self-propelled lawn mower, brand new.",
+    "seller": "Garden Experts"
+  },
+  {
+    "itemName": "Crib",
+    "category": "Family",
+    "price": 200,
+    "description": "Convertible crib with mattress.",
+    "seller": "Baby's Best"
+  },
+  {
+    "itemName": "Mountain Bike",
+    "category": "Sporting Goods",
+    "price": 600,
+    "description": "Full-suspension mountain bike for trails.",
+    "seller": "Adventure Sports"
+  },
+  {
+    "itemName": "Lego Set",
+    "category": "Toys & Games",
+    "price": 80,
+    "description": "Large Lego set with over 1000 pieces.",
+    "seller": "Toy World"
+  },
+  {
+    "itemName": "Drill Set",
+    "category": "Home Improvement Supplies",
+    "price": 100,
+    "description": "Cordless drill with multiple attachments.",
+    "seller": "Tool Warehouse"
+  },
+  {
+    "itemName": "Hammer",
+    "category": "Tools",
+    "price": 20,
+    "description": "Heavy-duty claw hammer.",
+    "seller": "Tool Masters"
+  },
+  {
+    "itemName": "Cat Tree",
+    "category": "Pet Supplies",
+    "price": 120,
+    "description": "Large multi-level cat tree for play.",
+    "seller": "Pet Palace"
+  },
+  {
+    "itemName": "Office Chair",
+    "category": "Office Supplies",
+    "price": 150,
+    "description": "Ergonomic office chair with lumbar support.",
+    "seller": "Office Essentials"
+  },
+  {
+    "itemName": "Guitar",
+    "category": "Musical Instruments",
+    "price": 400,
+    "description": "Acoustic guitar with premium sound.",
+    "seller": "Music Central"
+  },
+  {
+    "itemName": "DVD Collection",
+    "category": "Entertainment",
+    "price": 50,
+    "description": "Classic movies collection on DVD.",
+    "seller": "Movie Mania"
+  },
+  {
+    "itemName": "Paint Kit",
+    "category": "Hobbies",
+    "price": 30,
+    "description": "Beginner's painting kit with brushes and paints.",
+    "seller": "Art Supplies Co."
+  },
+  {
+    "itemName": "Free Couch",
+    "category": "Free Stuff",
+    "price": 0,
+    "description": "Used couch, good condition, must pick up.",
+    "seller": "Sarah's Listings"
+  },
+  {
+    "itemName": "Antique Vase",
+    "category": "Everything Else",
+    "price": 500,
+    "description": "Rare antique vase from the 1800s.",
+    "seller": "Vintage Finds"
+  },
+  {
+    "itemName": "Toyota Corolla",
+    "category": "Vehicles",
+    "price": 9500,
+    "description": "Fuel-efficient compact car, great condition.",
+    "seller": "Quick Car Sales"
+  },
+  {
+    "itemName": "Beach House Rental",
+    "category": "Property Rentals",
+    "price": 4000,
+    "description": "Oceanfront beach house, 3 bedrooms.",
+    "seller": "Coastal Rentals"
+  },
+  {
+    "itemName": "Sneakers",
+    "category": "Apparel",
+    "price": 100,
+    "description": "Comfortable running shoes, new in box.",
+    "seller": "Sneaker Hub"
+  },
+  {
+    "itemName": "Smart TV",
+    "category": "Electronics",
+    "price": 1200,
+    "description": "65-inch 4K Smart TV with streaming apps.",
+    "seller": "Tech Superstore"
+  },
+  {
+    "itemName": "Dining Table",
+    "category": "Home Goods",
+    "price": 500,
+    "description": "Solid wood dining table, seats 6.",
+    "seller": "Home Essentials"
+  },
+  {
+    "itemName": "Outdoor Grill",
+    "category": "Garden & Outdoor",
+    "price": 350,
+    "description": "Gas-powered outdoor grill with 4 burners.",
+    "seller": "Grill Pros"
+  },
+  {
+    "itemName": "Stroller",
+    "category": "Family",
+    "price": 250,
+    "description": "Lightweight stroller, folds for easy storage.",
+    "seller": "Baby World"
+  },
+  {
+    "itemName": "Tennis Racket",
+    "category": "Sporting Goods",
+    "price": 75,
+    "description": "Professional-grade tennis racket.",
+    "seller": "Sporting Goods Plus"
+  },
+  {
+    "itemName": "Board Game",
+    "category": "Toys & Games",
+    "price": 25,
+    "description": "Classic board game for family fun.",
+    "seller": "Games Galore"
+  },
+  {
+    "itemName": "Power Saw",
+    "category": "Home Improvement Supplies",
+    "price": 200,
+    "description": "Electric power saw for wood and metal.",
+    "seller": "Tool Barn"
+  },
+  {
+    "itemName": "Screwdriver Set",
+    "category": "Tools",
+    "price": 15,
+    "description": "20-piece precision screwdriver set.",
+    "seller": "Handyman's Choice"
+  },
+  {
+    "itemName": "Dog Bed",
+    "category": "Pet Supplies",
+    "price": 50,
+    "description": "Soft, washable dog bed for large breeds.",
+    "seller": "Pet Emporium"
+  },
+  {
+    "itemName": "Desk Organizer",
+    "category": "Office Supplies",
+    "price": 20,
+    "description": "Multi-compartment desk organizer.",
+    "seller": "Office Max"
+  },
+  {
+    "itemName": "Electric Keyboard",
+    "category": "Musical Instruments",
+    "price": 300,
+    "description": "88-key electric keyboard with stand.",
+    "seller": "Music Pro Shop"
+  },
+  {
+    "itemName": "Vinyl Records",
+    "category": "Entertainment",
+    "price": 60,
+    "description": "Collection of classic rock vinyl records.",
+    "seller": "Vinyl Vault"
+  },
+  {
+    "itemName": "Model Airplane Kit",
+    "category": "Hobbies",
+    "price": 40,
+    "description": "Build-it-yourself model airplane kit.",
+    "seller": "Hobby Junction"
+  },
+  {
+    "itemName": "Free Books",
+    "category": "Free Stuff",
+    "price": 0,
+    "description": "Collection of novels, free to a good home.",
+    "seller": "Neighborhood Library"
+  },
+  {
+    "itemName": "Vintage Camera",
+    "category": "Everything Else",
+    "price": 250,
+    "description": "Film camera from the 1970s, fully functional.",
+    "seller": "Retro Cameras"
+  },
+  {
+    "itemName": "Jeep Wrangler",
+    "category": "Vehicles",
+    "price": 18000,
+    "description": "Off-road ready, well-maintained Jeep.",
+    "seller": "Off-Road Auto"
+  },
+  {
+    "itemName": "Luxury Apartment",
+    "category": "Property Rentals",
+    "price": 3200,
+    "description": "2-bedroom apartment with modern amenities.",
+    "seller": "Luxury Living"
+  },
+  {
+    "itemName": "Winter Coat",
+    "category": "Apparel",
+    "price": 180,
+    "description": "Waterproof winter coat with insulation.",
+    "seller": "Cold Weather Gear"
+  },
+  {
+    "itemName": "Bluetooth Headphones",
+    "category": "Electronics",
+    "price": 150,
+    "description": "Noise-cancelling Bluetooth headphones.",
+    "seller": "AudioTech"
+  },
+  {
+    "itemName": "Area Rug",
+    "category": "Home Goods",
+    "price": 300,
+    "description": "Large, handwoven area rug.",
+    "seller": "Rug World"
+  },
+  {
+    "itemName": "Patio Furniture Set",
+    "category": "Garden & Outdoor",
+    "price": 700,
+    "description": "4-piece patio set with table and chairs.",
+    "seller": "Outdoor Living"
+  },
+  {
+    "itemName": "Baby Monitor",
+    "category": "Family",
+    "price": 100,
+    "description": "Video baby monitor with night vision.",
+    "seller": "Baby Watch"
+  },
+  {
+    "itemName": "Yoga Mat",
+    "category": "Sporting Goods",
+    "price": 40,
+    "description": "Eco-friendly yoga mat, non-slip surface.",
+    "seller": "Fitness Gear"
+  },
+  {
+    "itemName": "Puzzle",
+    "category": "Toys & Games",
+    "price": 15,
+    "description": "1000-piece puzzle with vibrant artwork.",
+    "seller": "Puzzle Place"
+  },
+  {
+    "itemName": "Paint Sprayer",
+    "category": "Home Improvement Supplies",
+    "price": 150,
+    "description": "Electric paint sprayer for smooth finishes.",
+    "seller": "Paint Pro"
+  }
+]
